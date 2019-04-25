@@ -1,0 +1,59 @@
+<view class="container">
+	<view class="userinfo">
+		<image wx:if="{{userInfo && userInfo.avatarUrl}}" class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ userInfo.nickName }}</text>
+	</view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="my-item">
+    <navigator url="/pages/order-list/index" hover-class="navigator-hover">我的订单</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/select-address/index" hover-class="navigator-hover">我的收货地址</navigator>
+  </view>
+  <view class="my-item">
+    <navigator url="/pages/mycoupons/index" hover-class="navigator-hover">我的优惠券</navigator>
+  </view>
+  <view  wx:if="{{!userMobile}}" class="my-item" style="border:none;background:white">绑定手机号码试试
+     <button bindtap="showDialogBtn" class="btn-phone">立即绑定</button> 
+     <!-- <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">绑定手机号码</button> -->
+  </view>
+   <view wx:if="{{userMobile}}" class="my-item" style="border:none;margin-top:10rpx；text-align:left;overflow:hidden;background:white;display:block;" bindtap="showDialogUp"> 
+    <text style='display:block;float:left'>手机号码  </text>
+    <text style='display:block;float:right;padding-right:90rpx' >{{userMobile}}</text>
+  </view> 
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="about" bindtap="aboutUs" class='my-item'>关于我们</view>
+  <view class="about" class='my-item'>
+     <button plain='true' open-type='contact' style='border:none;text-align:left;padding:0;color:#000000;font-size:18px;width:100%'>联系客服</button>
+  </view>
+  <!-- <button type='primary' plain='true' open-type='contact'>联系客服</button>   -->
+  <view style="height:20rpx;background: #eee;width:100%;"></view> 
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="version">Powered by baizitech.com v {{version}}</view>
+  <view style="height:20rpx;background: #eee;width:100%;"></view>
+  <view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+  <view class="modal-dialog" wx:if="{{showModal}}">
+    <view class="modal-title">绑定手机号码</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="请输入手机号码"></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm"  data-do="bind">确定</view>
+    </view>
+  </view>
+  <view class="modal-dialog" wx:if="{{showModalUp}}">
+    <view class="modal-title">修改手机号码</view>
+    <view class="modal-content">
+      <view class="modal-input">
+        <input placeholder-class="input-holder" type="number" maxlength="11" bindinput="inputChange" class="input" placeholder="请输入手机号码"></input>
+      </view>
+    </view>
+    <view class="modal-footer">
+      <view class="btn-cancel" bindtap="onCancelUp" data-status="cancel">取消</view>
+      <view class="btn-confirm" bindtap="onConfirm" data-status="confirm" data-do="up">确定</view>
+    </view>
+  </view>
+</view>

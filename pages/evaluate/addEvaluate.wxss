@@ -1,0 +1,103 @@
+/* pages/evaluate/addEvaluate.wxss */
+.goods-list{
+    width:100%;
+    background-color: #fff;
+    margin-bottom: 20rpx;
+    margin-top: 20rpx;
+}
+.goods-list  .a-goods{
+    width: 720rpx;
+    margin-left: 30rpx;
+    display: flex;
+    /*justify-content: space-between;*/
+    border-top: 1px solid #eee;
+    padding: 30rpx 30rpx 30rpx 0;
+}
+.goods-list  .a-goods .img-box{
+    width: 160rpx;
+    height:160rpx;
+    overflow: hidden;
+    margin-right: 20rpx;
+    background-color: #d8d8d8;
+}
+
+.goods-list .img-box .img{
+    width: 160rpx;
+    height:160rpx;
+}
+.goods-list  .a-goods .text-box{
+    width: 510rpx;
+    box-sizing: border-box;
+    padding-top: 10rpx;
+}
+.goods-list  .btn-row{
+    width: 720rpx;
+    margin-left: 30rpx;
+    border-top: 1rpx solid #eee;
+}
+.confirm-btn{
+    background:#ffffff;
+    border:1rpx solid #e64340;
+    border-radius:6rpx;
+    width:164rpx;
+    height:60rpx;
+    line-height: 60rpx;
+    text-align: center;
+    margin: 20rpx 30rpx 20rpx auto;
+    font-size:26rpx;
+    color:#e64340;
+}
+.a-goods .text-box .arow{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+.a-goods .text-box .arow .goods-name{
+     width: 360rpx;
+     font-size:26rpx;
+     height: 74rpx;
+     color:#000000;
+     line-height: 1.6;
+     overflow: hidden;
+ }
+.a-goods .text-box .arow01{
+    margin-bottom: 30rpx;
+}
+.a-goods .text-box .arow .goods-price{
+    font-size:26rpx;
+    color:#000000;
+    align-self: flex-start;
+}
+.a-goods .text-box .arow .goods-label{
+    font-size: 26rpx;
+    color: #999;
+}
+.a-goods .text-box .arow .goods-num{
+    font-size: 26rpx;
+    color: #999;
+}
+.evaluate{
+  margin-top: 5px;
+  padding: 0 15px;
+}
+.evaluate .radio-group{
+  font-size: 16px
+}
+.evaluate .radio-group .radio{
+  margin-right: 10px
+}
+.section{
+  padding-right: 15px;
+}
+.section textarea{
+  border: 1px solid #999999;
+  display: block;
+  padding: 5px;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+.evaluateBtn{
+  padding: 20px 15px
+}

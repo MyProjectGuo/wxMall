@@ -1,0 +1,62 @@
+.container {
+    background-color:#F2f2f2;
+}
+.coupons-list{
+    width: 100%;
+    background-color: #fff;
+    margin-top: 20rpx;
+    position: relative;
+}
+
+.bottom-box{
+    position:fixed;
+    width: 100%;
+    bottom: 0;
+    font-size:28rpx;
+    color:#000000;
+    border-top: 1rpx solid #eee;
+    height:100rpx;
+    line-height: 100rpx;
+    background: #fff url(https://cdn.it120.cc/images/weappshop/arrow-right.png) no-repeat 705rpx center;
+    background-size: 16rpx auto,750rpx auto;
+}
+.bottom-box .add-btn{
+    margin-left: 30rpx;
+    padding-left: 70rpx;
+    background: url(https://cdn.it120.cc/images/weappshop/add-addr.png) no-repeat left center;
+    background-size: 40rpx auto;
+}
+.coupons-item{
+  width:630rpx;
+  height: 180rpx;
+  margin: 10rpx;
+  padding: 50rpx;
+  background-color: #f1a83b;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #fff;
+  position: relative
+}
+
+
+.a-goods-conts{
+    position: absolute;
+    right: 30rpx;
+    top: 0;
+    bottom: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    display: flex;
+    justify-content:space-between;
+    padding-right: 50rpx;
+    width: 100rpx;
+    box-sizing: border-box;
+    transition: margin-left 0.2s ease-in-out;
+    background: url(https://cdn.it120.cc/images/weappshop/gou.png) no-repeat 30rpx center;
+    background-size: 40rpx auto; 
+    height: 50rpx
+}
+.a-goods-conts.active{
+    background: url(https://cdn.it120.cc/images/weappshop/gou-red.png) no-repeat 30rpx center;
+    background-size: 40rpx auto; 
+}

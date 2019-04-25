@@ -1,0 +1,16 @@
+<view class="container">
+    <view class="coupons-list">
+      <view class="coupons-item" wx:for-items="{{coupons}}" wx:for-index="idx"  bindtap="gitCoupon" data-id="{{item.id}}">
+        <view style="font-size: 50rpx"> ￥ {{item.couponModel.couponPrice}} 元 </view>
+        <view> {{item.couponModel.remark}} </view>
+        <view> 满 {{item.couponModel.limitPrice}} 元使用 </view>
+        <view wx:if="{{!item.now}}"> 领取后{{item.couponModel.validityTime}}天内有效</view>
+        <view  wx:if="{{item.now}}"> 有效期：{{item.now}} - {{item.end}} </view> 
+      </view>
+    </view>
+    <view style="height:100rpx;background-color:#fff;width:100%;"></view>
+    <view class="bottom-box">
+        <view class="add-btn" bindtap="goBuy">立即前往下单</view>
+    </view>
+
+</view>

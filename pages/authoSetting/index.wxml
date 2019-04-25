@@ -1,0 +1,13 @@
+<view>
+  <view class='imgs'>
+      <image src='/images/logo.png'></image>
+  </view>
+  <view class='testBox'>
+      <text>申请获取以下权限</text>
+      <text>获得你的公开信息（昵称、头像等）</text>
+  </view>
+  <view>
+      <button open-type="getUserInfo" bindgetuserinfo="getUserInfo" hover-stop-propagation="false">授权登录</button>
+     
+  </view>
+</view>

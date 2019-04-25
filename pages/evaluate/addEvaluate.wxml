@@ -1,0 +1,43 @@
+<view class="goods-list">
+  <!-- <form bindsubmit="submitReputation" report-submit="true"> -->
+    <block wx:for-items="{{orderDetail}}" wx:for-index="idx">
+      <view class="a-goods">
+          <view class="img-box">
+            <image src="{{item.picture}}" class="img" />
+          </view>
+          <view class="text-box">
+            <view class="arow arow01">
+              <view class="goods-name">{{item.goodName}}</view>
+              <view class="goods-price">¥ {{item.goodPrice}}</view>
+            </view>
+            <view class="arow">
+              <view class="goods-label">{{item.spec}}</view>
+              <view class="goods-num">x {{item.goodNum}}</view>
+            </view>
+          </view>
+      </view>
+      <view class='evaluate'>
+        <radio-group class="radio-group" bindchange="radioChange">
+          <label class="radio" >
+            <radio value="0" checked='true'/>好评
+          </label>
+          <label class="radio">
+            <radio value="1"/>中评
+          </label>
+          <label class="radio">
+            <radio value="2"/>差评
+          </label>
+        </radio-group>
+        <view class="section">
+          <textarea bindinput="bindTextAreaBlur" placeholder="请输入评价...." />
+        </view>
+      </view>
+      <view class='evaluateBtn' wx:if="{{orderDetail.length >1}}">
+        <button type="default"  data-idx="{{idx}}" data-id="{{item.goodId}}" data-index="{{item.spec}}" bindtap="addEvaluation"> 确认 </button> 
+      </view>
+    </block>
+  <!-- </form>  -->
+   <view class='evaluateBtn'>
+    <button type="primary"  bindtap="confirmEvaluation"> 提交评价 </button> 
+  </view>    
+</view>

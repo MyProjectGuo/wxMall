@@ -1,0 +1,12 @@
+.notice {
+  width: 100%;
+  /* padding: 15rpx; */
+  font-size: 25rpx;
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+.title {
+  color:chocolate;
+  font-size: 30rpx;
+  margin-bottom: 30rpx;
+}

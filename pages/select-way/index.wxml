@@ -1,0 +1,12 @@
+<view class='container'>
+  <view class="goods-list">
+        <view class="list-title">请选择配送方式</view>
+       <view class="row-box" style="border-bottom:none;">
+          <view class="label" bindtap="choose" wx:for-items="{{districtList}}" wx-key="{{index}}" data-id="{{item.distributionId}}" data-name="{{item.distributionName}}" data-price="{{item.distributionPrice}}">
+             <view>{{item.distributionName}} ￥ {{item.distributionPrice}}</view>
+             <view class="a-goods-conts {{item.active? 'active' : ''}}"></view>
+          </view>
+      </view>
+
+  </view> 
+</view> 
